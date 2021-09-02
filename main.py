@@ -33,7 +33,14 @@ response = ""
 while True:
     if response == "quit":
         break
-    # Find passage (update)
     current_location = {}
-    # Display passage (render the world)
-    # Ask for response (get input)
+    for passage in world["passages"]:
+      if passage["name"] == current:
+          current_location = passage
+
+print(current_location["name"])
+print(current_location["cleanText"])
+for link in current_location["links"]:
+  print(link["linkText"])
+
+response = input("Where do you want to go? ")
