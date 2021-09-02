@@ -44,3 +44,6 @@ for link in current_location["links"]:
   print(link["linkText"])
 
 response = input("Where do you want to go? ")
+for link in current_location["links"]:
+  if response == link["linkText"]:
+    current = link["passageName"]
